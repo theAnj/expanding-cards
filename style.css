@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Cormorant+Garamond", sans-serif;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  width: 90vw;
+}
+
+.panel {
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  cursor: pointer;
+  border-radius: 50px;
+  margin: 4px;
+  color: white;
+  position: relative;
+  transition: flex 0.3s ease-in;
+}
+
+.panel.active {
+  flex: 5;
+}
+
+.panel h3{
+    font-size: 20px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    word-wrap: normal;
+    opacity: 0;
+}
+
+.panel.active h3 {
+  opacity: 1;
+  transition: opacity .3s ease-in 0.3s;
+}
+
+@media only screen and (max-width: 480px) {
+  .container {
+    width: 100vw;
+  }
+
+  .panel:nth-child(4),
+  .panel:nth-child(5) {
+    display: none;
+  }
+}
+
+/* .panel h3 {
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+}
+ */
